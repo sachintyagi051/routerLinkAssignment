@@ -1,1 +1,23 @@
-<p>userbyid works!</p>
+<div class="jumbotron jumbotron-fluid bg-info text-white text-center">
+
+    <div class="container" style="width: 100%;">
+      <h1 style="font-size: 3.5rem; font-weight: 300; line-height: 1.4;">USER</h1>
+     
+    </div>
+  </div>
+  
+  <navbar></navbar>
+  
+  <!-- cards-->
+  <div class="container">
+    
+      <div *ngFor="let user of users" class="col-lg-4 col-md-6 col-sm-12 py-4">
+           <div  class="card-block py-3">
+            
+            UserData: {{ user }}
+       
+            
+          </div>
+       
+      </div>
+  </div>

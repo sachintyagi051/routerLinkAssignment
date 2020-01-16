@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./userbyid.component.scss']
 })
 export class UserbyidComponent implements OnInit {
-
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.paramMap
+        .subscribe(params => {
+          console.log(params.get('id'));
+          
+        })
   }
 
 }
