@@ -1,0 +1,28 @@
+<div class="jumbotron jumbotron-fluid bg-info text-white text-center">
+
+  <div class="container" style="width: 100%;">
+    <h1 style="font-size: 3.5rem; font-weight: 300; line-height: 1.4;">JSON USERS</h1>
+   
+  </div>
+</div>
+
+<navbar></navbar>
+
+<!-- cards-->
+<div class="container">
+  <div class="row">
+    <div *ngFor="let user of users" class="col-lg-4 col-md-6 col-sm-12 py-4">
+      <div class="card text-center">
+        <a class="list-group-item" [routerLink]="['/users', user.id]"><i class="far fa-user" style="font-size: 300%;"></i></a>
+       
+        <div  class="card-block py-3">
+          
+          Name: {{ user.name }}<br>
+      Username: {{ user.username }}
+          
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

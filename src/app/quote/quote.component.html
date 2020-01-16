@@ -1,0 +1,19 @@
+<div class="jumbotron jumbotron-fluid bg-info text-white text-center">
+
+    <div class="container" style="width: 100%;">
+      <h1 style="font-size: 3.5rem; font-weight: 300; line-height: 1.4;">JSON POSTS</h1>
+     
+    </div>
+  </div>
+  
+  
+  <navbar></navbar>
+  <!-- cards-->
+  
+<ul class="list-group">
+  <li 
+    *ngFor="let post of posts"
+    class="list-group-item">
+    {{ post.title }}
+  </li>
+</ul>
