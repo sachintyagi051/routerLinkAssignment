@@ -1,23 +1,37 @@
 <div class="jumbotron jumbotron-fluid bg-info text-white text-center">
+  <div class="container" style="width: 100%;">
+    <h1 style="font-size: 3.5rem; font-weight: 300; line-height: 1.4;">USER</h1>
+  </div>
+</div>
+<navbar></navbar>
 
-    <div class="container" style="width: 100%;">
-      <h1 style="font-size: 3.5rem; font-weight: 300; line-height: 1.4;">USER</h1>
-     
-    </div>
+<div class="container">
+  <div *ngIf="users">
+    <div *ngFor="let user of users"></div>
   </div>
-  
-  <navbar></navbar>
-  
-  <!-- cards-->
-  <div class="container">
-    
-      <div *ngFor="let user of users" class="col-lg-4 col-md-6 col-sm-12 py-4">
-           <div  class="card-block py-3">
-            
-            UserData: {{ user }}
-       
-            
-          </div>
-       
-      </div>
+
+
+  UserName:{{ user?.username }}<br />
+  Name: {{ user?.name }}<br />
+
+  Address: <br />
+  <div class="col-lg-12">
+    Street: {{ user?.address?.street }}<br />
+    Suite: {{ user?.address?.suite }}<br />
+    City: {{ user?.address?.city }}<br />
+    Zipcode: {{ user?.address?.zipcode }}<br />
   </div>
+
+  Company: <br />
+  <div class="col-lg-12">
+    Name: {{ user?.company?.name }}<br />
+    CathPhrase: {{ user?.company?.cathPhrase }}<br />
+    Bs: {{ user?.company?.bs }}
+  </div>
+
+  <div>
+    <button type="button" class="btn btn-info my-4" [routerLink]="['/users']">
+      Back
+    </button>
+  </div>
+</div>

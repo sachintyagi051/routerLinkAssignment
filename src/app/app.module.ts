@@ -1,7 +1,8 @@
+import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
-import { NavbarComponent } from './navbar/navbar.component';
+
 import { NgModule }         from '@angular/core';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { BrowserModule }    from '@angular/platform-browser';

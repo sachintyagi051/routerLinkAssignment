@@ -16,7 +16,7 @@ users: any[];
   ngOnInit() {
     this.http.get('https://jsonplaceholder.typicode.com/users')
     .subscribe( (res: any) => {
-      console.log("response:",res);
+      // console.log("response:",res);
       this.users = res;
     })
   }
